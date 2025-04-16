@@ -127,3 +127,25 @@ ul {
     flex-flow: column wrap;
 }
 
+#stories {
+    padding-top: 2vw;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-bottom: 1vw;
+}
+
+#storyDiv {
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgb(255, 200, 248);
+    border: 1px solid rgb(255, 200, 248);
+    line-height: 1.8;
+    font-weight: 450;
+    max-width: 75ch;
+    min-width: 45ch;
+    font-size: 16px;
+    padding: 1rem;
+    display: inline-block; 
+    margin: 0 2vw 0 2vw;
+}
