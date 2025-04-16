@@ -43,17 +43,23 @@
   }
 
   /*End Reset*/
+:root {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+main {
+    padding-top: 5vw;
+}
 
-nav {
+nav { 
     display: flex;
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: aliceblue; 
-
+    background-color: rgb(255, 200, 200); 
+    height: 5vw
 }
 
 nav > div > a {
@@ -75,3 +81,38 @@ nav > a {
     margin: 1vw 0 1vw 1.5vw;
     
 }
+section {
+    padding-top: 2vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+#story {   
+    background: black;
+}
+#story > * {
+    margin: 2vw 1vw 0 1vw;
+}
+
+#story > h1 {
+    margin-bottom: 1vw;
+    color: white;
+}
+
+#story > p {
+   
+    color: white;
+   
+}
+
+p {
+    line-height: 1.8;
+    font-weight: 550;
+    max-width: 75ch;
+    min-width: 45ch;
+    font-size: 20px;
+    text-align: center;
+}
+
+
