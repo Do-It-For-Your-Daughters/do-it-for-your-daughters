@@ -26,11 +26,11 @@
     font: inherit;
   }
   
-  p, h1, h2, h3, h4, h5, h6 {
+  p, h1, h2, h3, h4, h5, h6, li {
     overflow-wrap: break-word;
   }
   
-  p {
+  p, li {
     text-wrap: pretty;
     hyphens: auto;  /* My addition */
   }
@@ -106,13 +106,24 @@ section {
    
 }
 
-p {
+p, li {
     line-height: 1.8;
     font-weight: 550;
     max-width: 75ch;
     min-width: 45ch;
     font-size: 20px;
-    text-align: center;
 }
 
+p {
+    text-align: center;;
+}
+
+h1, h2 {
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    flex-flow: column wrap;
+}
 
