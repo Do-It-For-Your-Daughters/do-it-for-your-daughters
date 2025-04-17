@@ -12,9 +12,18 @@
     }
   }
   
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    height: 100vw;
+    margin: 0;
+
   }
   
   img, picture, video, canvas, svg {
@@ -48,7 +57,7 @@
 }
 
 main {
-    padding-top: 5vw;
+    padding-top: 5rem;
 }
 
 nav { 
@@ -59,7 +68,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 200, 200); 
-    height: 5vw
+    height: 5rem;
 }
 
 nav > div > a {
@@ -79,7 +88,8 @@ nav > a {
     font-weight: 600;
     color: black;
     margin: 1vw 0 1vw 1.5vw;
-    
+  
+    margin-bottom: 1vw;
 }
 section {
     padding-top: 2vw;
@@ -149,3 +159,20 @@ ul {
     display: inline-block; 
     margin: 0 2vw 0 2vw;
 }
+
+textarea {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+button {
+  background-color: lightskyblue;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.25rem;
+  font-weight: 700;
+}
+
