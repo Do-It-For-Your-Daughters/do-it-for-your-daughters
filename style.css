@@ -119,7 +119,9 @@ section {
 
 }
 
-
+hr {
+  font-weight: 700;
+}
 
 /* ---------- TEXT ---------- */
 p, li {
@@ -138,9 +140,15 @@ h1, h2 {
   text-decoration: underline;
 }
 
+ul, li {
+  text-align: left;
+  margin-left: 1rem; /* optional: gives a little spacing from the edge */
+}
+
 ul {
   display: flex;
   flex-flow: column wrap;
+  
 }
 
 /* ---------- STORIES ---------- */
@@ -150,7 +158,11 @@ ul {
   flex-flow: column nowrap;
   padding-bottom: 1vw;
 }
-
+#output {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
 #storyDiv {
   width: 30vw;
   height: auto;
@@ -164,11 +176,14 @@ ul {
   font-size: 16px;
   padding: 1rem;
   display: inline-block; 
-  margin: 0 2vw 0 2vw;
+  margin: 0 2vw 2vw 2vw;
   background-color: #FFF8FA;
+  overflow-wrap:break-word;
 
 }
-
+#story-header {
+  margin-bottom: 3vw;
+}
 /* ---------- FORM ELEMENTS ---------- */
 textarea {
   border: 1px solid black;
