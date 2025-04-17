@@ -26,6 +26,8 @@ body {
   height: 100vh; /* ✅ MOBILE FIX: changed from 100vw to 100vh */
   margin: 0;
   overflow-x: hidden; /* ✅ Prevent horizontal scroll on mobile */
+  background-color: #FFE4EC;
+  color: #1E1E1E;
 }
 
 img, picture, video, canvas, svg {
@@ -58,7 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+::selection {
+  background-color: #FFDDEE; 
+  color: #1E1E1E;
+}
 main {
   padding-top: 5rem;
 }
@@ -70,11 +75,13 @@ nav {
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 200, 200); 
+  background-color: #FF6B81; 
   height: 5rem;
   padding: 0 1rem; /* ✅ MOBILE FIX: padding instead of margin for layout consistency */
 }
-
+a {
+  color: rgb(0, 162, 255);
+}
 nav > div > a {
   margin-right: 5vw;
   font-size: 1.5rem;
@@ -103,19 +110,16 @@ section {
   padding-bottom: 1vw;
 }
 
-#story {   
-  background: black;
-}
+
 #story > * {
   margin: 2vw 1vw 0 1vw;
 }
 #story > h1 {
   margin-bottom: 1vw;
-  color: white;
+
 }
-#story > p {
-  color: white;
-}
+
+
 
 /* ---------- TEXT ---------- */
 p, li {
@@ -152,7 +156,7 @@ ul {
   height: auto;
   text-align: center;
   box-shadow: 5px 5px 5px rgb(255, 200, 248);
-  border: 1px solid rgb(255, 200, 248);
+  border: 1px solid #FF6B81;
   line-height: 1.8;
   font-weight: 450;
   max-width: 75ch;
@@ -161,6 +165,8 @@ ul {
   padding: 1rem;
   display: inline-block; 
   margin: 0 2vw 0 2vw;
+  background-color: #FFF8FA;
+
 }
 
 /* ---------- FORM ELEMENTS ---------- */
@@ -221,4 +227,51 @@ button {
   section {
     padding: 1rem;
   }
+}
+
+/* === SECTION THEMING ADDITIONS === */
+
+#story {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+
+/* 💜 Help Section: Soothing lavender */
+#help {
+  background-color: #f3e8ff;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 🌸 Talk Section: Friendly blush pink */
+#talk {
+  background-color: #ffe6eb;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 🍑 Share Section: Soft peach */
+#share {
+  background-color: #fff0e6;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 🪻 Footer: Muted mauve */
+footer {
+  background-color: #f5dce5;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li.contacts {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
