@@ -217,6 +217,9 @@ button {
     margin: 0.5rem 0;
   }
 
+  nav > a::after, nav > div > a::after {
+    content: " |"
+  }
   main {
     padding-top: 6rem;
   }
