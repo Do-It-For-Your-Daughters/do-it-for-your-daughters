@@ -1,169 +1,175 @@
+/* ---------- RESET ---------- */
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
-    }
-  }
-  
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
   html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    interpolate-size: allow-keywords;
   }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    width: 100vw;
-    height: 100vw;
-    margin: 0;
-
-  }
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6, li {
-    overflow-wrap: break-word;
-  }
-  
-  p, li {
-    text-wrap: pretty;
-    hyphens: auto;  /* My addition */
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  #root, #__next {
-    isolation: isolate;
-  }
-
-  /*End Reset*/
-:root {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-main {
-    padding-top: 5rem;
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav { 
-    display: flex;
-    position: fixed;
-    width: 100vw;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 200, 200); 
-    height: 5rem;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
+  height: 100vh; /* ✅ MOBILE FIX: changed from 100vw to 100vh */
+  margin: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll on mobile */
 }
 
-nav > div > a {
-    margin-right: 5vw;
-    font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-nav > div > a:hover {
-    text-decoration: underline;
+input, button, textarea, select {
+  font: inherit;
 }
 
-nav > a {
-    font-size: 2rem;
-    text-decoration: none;
-    font-weight: 600;
-    color: black;
-    margin: 1vw 0 1vw 1.5vw;
-  
-    margin-bottom: 1vw;
-}
-section {
-    padding-top: 2vw;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 1vw;
-}
-#story {   
-    background: black;
-}
-#story > * {
-    margin: 2vw 1vw 0 1vw;
-}
-
-#story > h1 {
-    margin-bottom: 1vw;
-    color: white;
-}
-
-#story > p {
-   
-    color: white;
-   
+p, h1, h2, h3, h4, h5, h6, li {
+  overflow-wrap: break-word;
 }
 
 p, li {
-    line-height: 1.8;
-    font-weight: 550;
-    max-width: 75ch;
-    min-width: 45ch;
-    font-size: 20px;
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* ---------- GLOBAL ---------- */
+:root {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+  padding-top: 5rem;
+}
+
+nav { 
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 200, 200); 
+  height: 5rem;
+  padding: 0 1rem; /* ✅ MOBILE FIX: padding instead of margin for layout consistency */
+}
+
+nav > div > a {
+  margin-right: 5vw;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+nav > div > a:hover {
+  text-decoration: underline;
+}
+
+nav > a {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  margin: 1vw 0 1vw 1.5vw;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding-top: 2vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-bottom: 1vw;
+}
+
+#story {   
+  background: black;
+}
+#story > * {
+  margin: 2vw 1vw 0 1vw;
+}
+#story > h1 {
+  margin-bottom: 1vw;
+  color: white;
+}
+#story > p {
+  color: white;
+}
+
+/* ---------- TEXT ---------- */
+p, li {
+  line-height: 1.8;
+  font-weight: 550;
+  max-width: 75ch;
+  min-width: 45ch; /* 🔻 MAY CAUSE ISSUES ON SMALL SCREENS */
+  font-size: 20px;
 }
 
 p {
-    text-align: center;;
+  text-align: center;
 }
 
 h1, h2 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 ul {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
 
+/* ---------- STORIES ---------- */
 #stories {
-    padding-top: 2vw;
-    display: flex;
-    flex-flow: column nowrap;
-    padding-bottom: 1vw;
+  padding-top: 2vw;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-bottom: 1vw;
 }
 
 #storyDiv {
-    width: 30vw;
-    height: auto;
-    text-align: center;
-    box-shadow: 5px 5px 5px rgb(255, 200, 248);
-    border: 1px solid rgb(255, 200, 248);
-    line-height: 1.8;
-    font-weight: 450;
-    max-width: 75ch;
-    min-width: 45ch;
-    font-size: 16px;
-    padding: 1rem;
-    display: inline-block; 
-    margin: 0 2vw 0 2vw;
+  width: 30vw;
+  height: auto;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgb(255, 200, 248);
+  border: 1px solid rgb(255, 200, 248);
+  line-height: 1.8;
+  font-weight: 450;
+  max-width: 75ch;
+  min-width: 45ch; /* 🔻 Same issue here on smaller screens */
+  font-size: 16px;
+  padding: 1rem;
+  display: inline-block; 
+  margin: 0 2vw 0 2vw;
 }
 
+/* ---------- FORM ELEMENTS ---------- */
 textarea {
   border: 1px solid black;
   margin-bottom: 2rem;
   border-radius: 2px;
+  width: 90%; /* ✅ MOBILE FIX */
+  max-width: 600px;
 }
 
 button {
@@ -176,3 +182,43 @@ button {
   font-weight: 700;
 }
 
+/* ✅ ✅ ✅ RESPONSIVE MOBILE STYLES ✅ ✅ ✅ */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+  }
+
+  nav > a, nav > div > a {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  main {
+    padding-top: 6rem;
+  }
+
+  #storyDiv {
+    width: 90%;
+    min-width: auto;  /* ✅ MOBILE FIX: remove strict min-width */
+    max-width: 90vw;
+    margin: 1rem auto;
+  }
+
+  p, li {
+    font-size: 16px;
+    min-width: auto;  /* ✅ Remove fixed width on mobile */
+    max-width: 90vw;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
